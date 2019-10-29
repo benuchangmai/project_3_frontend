@@ -1,22 +1,189 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.Userlogin{
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  height: 700px;
+}
+.ChatHeader {
+  background-color: teal;
   color: white;
 }
+.ChatHeaderText {
+  color: white;
+  padding-left: 20px;
+  text-align: center;
+}
+.popup {
+  position: fixed;
+  padding: 5px;
+  width: 600px;
+  height: 40px;
+  left: 80%;
+  bottom: 10%;
+  margin-right: -10px; 
+}
+.popup_inner > .popup_click{
+  background-color: green;
+}
+.MessageList-container {
+  list-style-type: none;
+  overflow: visible;
+  padding: 20px 10px;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  list-style: none;
+  padding-left: 30px;
+  padding-right: 30px;
+  flex-grow: 1;
+  overflow-y: scroll;
+}
 
-.App-link {
-  color: #09d3ac;
+.Message > .Messages-message {
+  display: flex;
+  margin-top: 10px;
+}
+.Server > .Messages-message {
+  justify-content: center;
+  text-align: center;
+}
+.Messages-message-currentMember {
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.Message-content {
+  display: inline-block;
+  max-width: 500px;
+  word-wrap: break-word;
+}
+
+.Messages-message-currentMember > .Message-content {
+  align-items: flex-end;
+}
+.Server > .Messages-message > .Message-content {
+  align-items: center;
+}
+.Message-content > .username {
+  display: block;
+  color: gray;
+  font-size: 14px;
+  padding-bottom: 4px;
+}
+.Message-content > .message-body {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  max-width: 400px;
+  margin: 0;
+  border-radius: 12px;
+  background-color: white;
+}
+.Server > .Messages-message > .Message-content > .message-body{
+  background-color: powderblue;
+}
+.Messages-message-currentMember > .Message-content > .message-body {
+  background-color: honeydew;
+}
+
+.Message-content > .message-body > .text {
+  padding-right: 50px;
+  color: black;
+  display: inline-block;
+}
+.Message-content > .message-body > .created {
+  color: black;
+  font-size: 10px;
+  text-align: right;
+  align-items: flex-end;
+}
+
+.Messages-message-currentMember > .Message-content> .message-body > .text {
+  background-color: honeydew;
+}
+.Server > .Messages-message > .Message-content > .message-body >.text {
+  background-color: powderblue;
+  padding-right: 10px;
+}
+.ChatScreen {
+  display: flex;
+  overflow: visible;
+  background-color: gainsboro;
+  background-image: url('bck.png');
+  flex-direction: column;
+  height: 100%;
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+}
+.Message-input-block {
+  flex:1;
+  overflow: visible;
+  left:0;
+  bottom:0;
+  right:0;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding-top: 250px;
+}
+.message-form {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 0 auto 20px;
+}
+
+.ChatDetails {
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  height: 80%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.OnlineUsers-container {
+  list-style-type: none;
+  border-right: 1px solid black;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.Loginbutton {
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+}
+input {
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-top: 5px;
+  border: 1px solid black;
+  flex-grow: 1;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: orangered;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-left: 10px;
 }
